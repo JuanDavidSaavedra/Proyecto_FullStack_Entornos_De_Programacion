@@ -9,6 +9,16 @@
 [![DevTools](https://img.shields.io/badge/Spring%20DevTools-Enabled-orange.svg)](https://spring.io/projects/spring-boot)
 
 
+**Tecnologías utilizadas:**
+
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.6-6DB33F)]()
+[![Java](https://img.shields.io/badge/Java-17-ED8B00)]()
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-00618A)]()
+[![Maven](https://img.shields.io/badge/Maven-4.0.0-C71A36)]()
+[![JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Active-217346)]()
+
+
+
 ## Gestión del Proyecto aplicando la metodología SCRUM en Azure:
 
 ### Para ver las historias de usuario que hemos realizado en los diferentes Sprints de este Proyecto ve al enlace de abajo y sigue esta ruta:

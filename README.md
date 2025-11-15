@@ -12,8 +12,6 @@
 [![JUnit](https://img.shields.io/badge/JUnit-Tests-25A162?logo=junit5)]()
 
 
-
-
 ## Gestión del Proyecto aplicando la metodología SCRUM en Azure:
 
 ### Para ver las historias de usuario que hemos realizado en los diferentes Sprints de este Proyecto ve al enlace de abajo y sigue esta ruta:
@@ -24,13 +22,14 @@
 https://dev.azure.com/reservadechanchas/
 
 
-  
-
 ## 📖 Descripción del Proyecto
 
 **Sistema de Reservas Deportivas** es una plataforma web completa diseñada para optimizar la gestión de instalaciones deportivas. Desarrollado como proyecto académico para la asignatura de Entornos de Programación, ofrece una solución integral que conecta administradores y usuarios en un ecosistema deportivo eficiente.
 
-https://github.com/user-attachments/assets/31388d50-1ed3-4819-9732-073b00bfed24
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7e7847a6-d289-40f1-a290-4f8f5c598f9c" width="500">
+</p>
+
 
 
 ### 🎯 Objetivos Principales

@@ -1,6 +1,23 @@
 # 🏟️ SISTEMA DE RESERVAS DEPORTIVAS
 **PLATAFORMA INTEGRAL PARA LA GESTIÓN EFICIENTE DE CANCHAS, USUARIOS Y RESERVAS DEPORTIVAS**
 
+
+---
+
+## 👥 Equipo de Desarrollo
+
+**Asignatura**: Entornos de Programación - Grupo E1 
+
+**Integrantes**: 
+
+* Juan David Saavedra González - 2214111
+
+* Yosert Alejandro Higuera Lizarazo - 2205003
+
+**Periodo**: 2025-2
+
+**Universidad Industrial de Santander**
+
 ---
 
 ## 🛠️ Stack Tecnológico
@@ -43,6 +60,8 @@
 https://dev.azure.com/reservadechanchas/
 
 
+---
+
 ## 📖 Descripción del Proyecto
 
 **Sistema de Reservas Deportivas** es una plataforma web completa diseñada para optimizar la gestión de instalaciones deportivas. Desarrollado como proyecto académico para la asignatura de Entornos de Programación, ofrece una solución integral que conecta administradores y usuarios en un ecosistema deportivo eficiente.
@@ -50,11 +69,14 @@ https://dev.azure.com/reservadechanchas/
 https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
 
 
+---
+
 ### 🎯 Objetivos Principales
 - Digitalizar y automatizar el proceso de reservas deportivas
 - Mejorar la experiencia del usuario final
 - Optimizar la utilización de instalaciones deportivas
 - Proporcionar herramientas avanzadas de gestión para administradores
+
 
 ---
 
@@ -74,6 +96,7 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
 - **Notificaciones Automáticas**: Recordatorios y confirmaciones
 - **Perfil Personalizado**: Preferencias y historial de actividades
 
+
 ---
 
 ## 🗃️ Diseño de la Base de Datos
@@ -81,6 +104,8 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
 ### Diagrama Entidad-Relación
 <img width="952" height="472" alt="Diagrama de la BD" src="https://github.com/user-attachments/assets/25a45f4d-d894-4259-9d9d-fec4cd979547" />
 
+
+---
 
 ### Entidades Principales
 
@@ -110,6 +135,7 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
 - Un usuario puede tener muchas reservas
 - Una cancha puede tener muchas reservas
 
+
 ---
 
 ## 🚀 Instalación y Configuración
@@ -136,6 +162,7 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
    CREATE DATABASE reservas_deportivas;
    CREATE USER 'reservas_user'@'localhost' IDENTIFIED BY 'password';
    GRANT ALL PRIVILEGES ON reservas_deportivas.* TO 'reservas_user'@'localhost';
+   ... Resto del Script SQL contenido en este Repositorio llamado "ProyectoInicial.sql"
    ```
 
 3. **Configurar Application Properties**
@@ -144,103 +171,172 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
    spring.datasource.url=jdbc:mysql://localhost:3306/reservas_deportivas
    spring.datasource.username=reservas_user
    spring.datasource.password=password
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+   spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+   spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+   spring.web.resources.static-locations=classpath:/static/
+
+   logging.level.org.hibernate.orm.connections.pooling=WARN
+   logging.level.org.hibernate=INFO
+   logging.level.org.hibernate.SQL=DEBUG
+   logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+   spring.datasource.hikari.connection-timeout=20000
+   spring.datasource.hikari.maximum-pool-size=10
+   spring.datasource.hikari.minimum-idle=2
+   spring.datasource.hikari.idle-timeout=300000
+   spring.datasource.hikari.max-lifetime=1200000
+
+   spring.jackson.time-zone=America/Bogota
+   spring.jackson.locale=es_CO
+
+   server.port=8095
    ```
 
 4. **Ejecutar la Aplicación**
 
-   ```bash
+   **Backend: Ejecuta directamente desde tu IDE o con:**
+
+   ```
    mvn spring-boot:run
    ```
 
-5. **Acceder al Sistema**
+   **Frontend: En otra terminal, dentro de src/main/resources/static/frontend-reservas:**
 
    ```
-   http://localhost:8080
+   PS C:\Users\juanj\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\ProyectoInicial\src\main\resources\static\frontend-reservas>
    ```
 
-### 🔐 Credenciales de Prueba
+   Y ejecutas el comando:
 
-* **Administrador**: usuario: `admin` | contraseña: `123`
-* **Usuario Normal**: usuario: `mariagonz` | contraseña: `password123`
+   ```
+   npm start
+   ```
+   
+6. **Acceder al Sistema**
+
+   
+   # Para revisar el Backend (Endpoints)
+   * http://localhost:8095/api/usuarios
+   * http://localhost:8095/api/canchas
+   * http://localhost:8095/api/reservas
+   
 
 ---
 
 ## 📁 Estructura del Proyecto
 
 ```
-C:.ProyectoInicial
-├───.idea
-│   └───dataSources
-│       └───1bfd48c9-f09b-4830-8320-ca3b776d8645
-│           └───storage_v2
-│               └───_src_
-│                   └───schema
-├───.mvn
-│   └───wrapper
-├───.settings
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───uis
-│   │   │       └───edu
-│   │   │           └───entorno
-│   │   │               └───proyecto
-│   │   │                   └───inicial
-│   │   │                       ├───config
-│   │   │                       ├───controller
-│   │   │                       ├───exception
-│   │   │                       ├───model
-│   │   │                       │   └───dto
-│   │   │                       ├───repository
-│   │   │                       └───service
-│   │   │                           └───impl
-│   │   └───resources
-│   │       ├───static
-│   │       │   ├───css
-│   │       │   ├───img
-│   │       │   └───js
-│   │       └───templates
-│   └───test
-│       └───java
-│           └───uis
-│               └───edu
-│                   └───entorno
-│                       └───proyecto
-│                           └───inicial
-└───target
-    ├───classes
-    │   ├───META-INF
-    │   │   └───maven
-    │   │       └───uis.edu.entorno.proyecto.inicial
-    │   │           └───ProyectoInicial
-    │   ├───static
-    │   │   ├───css
-    │   │   ├───img
-    │   │   └───js
-    │   └───uis
-    │       └───edu
-    │           └───entorno
-    │               └───proyecto
-    │                   └───inicial
-    │                       ├───config
-    │                       ├───controller
-    │                       ├───exception
-    │                       ├───model
-    │                       │   └───dto
-    │                       ├───repository
-    │                       └───service
-    │                           └───impl
-    ├───generated-sources
-    │   └───annotations
-    ├───generated-test-sources
-    │   └───test-annotations
-    └───test-classes
-        └───uis
-            └───edu
-                └───entorno
-                    └───proyecto
-                        └───inicial
+C:...\ProyectoInicial\src\main\java\uis\edu\entorno\proyecto\inicial> (BackEnd)
+C:.
+|   ProyectoInicialApplication.java
+|
++---config
+|       CorsConfig.java
+|
++---controller
+|       AuthController.java
+|       CanchaController.java
+|       ReservaController.java
+|       SpaController.java
+|       UsuarioController.java
+|
++---exception
+|       ResourceNotFoundException.java
+|
++---model
+|   |   Cancha.java
+|   |   Reserva.java
+|   |   Usuario.java
+|   |
+|   \---dto
+|           ApiResponse.java
+|           LoginRequest.java
+|           ReservaRequest.java
+|           ReservaResponse.java
+|
++---repository
+|       CanchaRepository.java
+|       ReservaRepository.java
+|       UsuarioRepository.java
+|
+\---service
+    |   ICanchaService.java
+    |   IReservaService.java
+    |   IUsuarioService.java
+    |
+    \---impl
+            CanchaServiceImpl.java
+            ReservaServiceImpl.java
+            UsuarioServiceImpl.java
 ```
+
+```
+C:...\ProyectoInicial\src\main\resources\static\frontend-reservas> (FrontEnd)
+C:.
+|-- node
+  |-- public
+  |-- src
+  |-- .gitignore
+  |-- package-lock.json
+  |-- package.json
+  |-- README.md
+    |-- css
+    |-- img
+    |-- favicon.ico
+    |-- index.html
+    |-- logo192.png
+    |-- logo512.png
+    |-- manifest.json
+    |-- robots.txt
+      |-- styles.css
+      |-- cancha.png
+      |-- logo.png
+      |-- reservas.png
+      |-- usuarios.png
+    |-- components
+    |-- context
+    |-- services
+    |-- styles
+    |-- App.css
+    |-- App.js
+    |-- App.test.js
+    |-- index.css
+    |-- index.js
+    |-- logo.svg
+    |-- reportWebVitals.js
+    |-- setupTests.js
+      |-- Auth.css
+      |-- Bienvenida.css
+      |-- Bienvenida.js
+      |-- Canchas.css
+      |-- Canchas.js
+      |-- FormCanchas.css
+      |-- FormCanchas.js
+      |-- FormReservas.css
+      |-- FormReservas.js
+      |-- FormUsuarios.css
+      |-- FormUsuarios.js
+      |-- Login.css
+      |-- Login.js
+      |-- Menu.css
+      |-- Menu.js
+      |-- Navbar.js
+      |-- Register.js
+      |-- Reservas.css
+      |-- Reservas.js
+      |-- Usuarios.css
+      |-- Usuarios.js
+      |-- AuthContext.js
+      |-- api.js
+      |-- original.css
+```
+
 
 ---
 
@@ -248,31 +344,44 @@ C:.ProyectoInicial
 
 ### 🔐 Módulo de Autenticación
 
-* Registro de nuevos usuarios
-* Login seguro con roles
-* Recuperación de contraseña
-* Gestión de sesiones
+* Login de usuarios con validación contra la base de datos SQL.
+* Acceso diferenciado por roles: **ADMIN, OPERATOR y USER**.
+* Inicio de sesión con credenciales preconfiguradas para pruebas.
+* Gestión segura de contraseñas mediante hash.
+* Manejo de sesiones y control de acceso según permisos.
 
-### 🏟️ Módulo de Canchas
+### 👥 Módulo de Gestión de Usuarios
 
-* Catálogo de canchas disponibles
-* Filtros por deporte y ubicación
-* Gestión de precios y horarios
-* Estados de disponibilidad
+* Creación de nuevos usuarios con datos como cédula, nombre, email, usuario, contraseña y rol.
+* Consulta de usuarios por ID, cédula, nombre, email o nombre de usuario.
+* Actualización de la información de un usuario.
+* Eliminación de usuarios con validaciones de seguridad.
+
+### 🏟️ Módulo de Gestión de Canchas
+
+* Creación de nuevas canchas con atributos como nombre, deporte, ubicación y precio por hora.
+* Consulta de canchas por diferentes criterios, incluyendo ID, nombre, ubicación, precio/hora, capacidad y horarios.
+* Edición o actualización de la información de una cancha.
+* Desactivación de canchas por mantenimiento.
 
 ### 📅 Módulo de Reservas
 
-* Sistema de reservas en tiempo real
-* Calendario interactivo
-* Confirmaciones automáticas
-* Historial y cancelaciones
+* Creación de reservas seleccionando la fecha y el rango de horas.
+* Consulta de reservas por ID, usuario, cancha, fecha y horario.
+* Prevención de reservas solapadas mediante validaciones automáticas.
+* Consulta de reservas activas.
+* Cancelación de reservas existentes.
 
-### 📊 Módulo de Reportes
+---
 
-* Métricas de uso por cancha
-* Estadísticas de reservas
-* Reportes financieros
-* Análisis de tendencias
+### ⚙️ Requerimientos No Funcionales
+
+* Disponibilidad del sistema en la nube con acceso 24/7.
+* Escalabilidad para soportar aumento de usuarios y reservas.
+* Interfaz intuitiva, con formularios simples y validaciones de usabilidad.
+* Código mantenible, documentado y versionado en GitHub.
+* Tiempo de respuesta menor a 2 segundos en operaciones CRUD.
+
 
 ---
 
@@ -294,38 +403,6 @@ C:.ProyectoInicial
 
 ---
 
-## 🛣️ Roadmap Futuro
-
-### 🚀 Próximas Características
-
-* [ ] App móvil nativa
-* [ ] Sistema de pagos en línea
-* [ ] Integración con redes sociales
-* [ ] Notificaciones push
-* [ ] API REST pública
-* [ ] Sistema de torneos y ligas
-
----
-
-## 👥 Equipo de Desarrollo
-
-**Asignatura**: Entornos de Programación - Grupo E1 
-
-
-**Integrantes**: 
-
-* Juan David Saavedra González - 2214111
-
-* Yosert Alejandro Higuera Lizarazo - 2205003
-
-
-**Periodo**: 2025-2
-
-
-**Universidad Industrial de Santander**
-
----
-
 ## 📞 Soporte y Contacto
 
 ¿Encuentras un error o tienes sugerencias?
@@ -339,4 +416,4 @@ C:.ProyectoInicial
 
 ---
 
-*Última actualización: Octubre 2025*
+*Última actualización: Noviembre 2025*

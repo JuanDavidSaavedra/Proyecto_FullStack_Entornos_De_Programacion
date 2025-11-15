@@ -1,21 +1,16 @@
 # 🏟️ Sistema de Reservas Deportivas - Plataforma Integral
 
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.6-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Java](https://img.shields.io/badge/Java-17-red.svg)](https://www.oracle.com/java/)
-[![Maven](https://img.shields.io/badge/Maven-4.0.0-C71A36.svg)](https://maven.apache.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
-[![JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Active-6aa84f.svg)](https://spring.io/projects/spring-data-jpa)
-[![Spring Web](https://img.shields.io/badge/Spring%20Web-Rest%20API-0fa3b1.svg)](https://spring.io/projects/spring-boot)
-[![DevTools](https://img.shields.io/badge/Spring%20DevTools-Enabled-orange.svg)](https://spring.io/projects/spring-boot)
+**Tecnologías utilizadas**
 
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.6-6DB33F?logo=springboot)]()
+[![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk)]()
+[![Maven](https://img.shields.io/badge/Maven-4.0.0-C71A36?logo=apachemaven)]()
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-00618A?logo=mysql)]()
+[![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Active-217346?logo=spring)]()
+[![Spring Web](https://img.shields.io/badge/Spring%20Web-REST%20API-0fa3b1?logo=spring)]()
+[![Spring DevTools](https://img.shields.io/badge/Spring%20DevTools-Enabled-orange?logo=spring)]()
+[![JUnit](https://img.shields.io/badge/JUnit-Tests-25A162?logo=junit5)]()
 
-**Tecnologías utilizadas:**
-
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.6-6DB33F)]()
-[![Java](https://img.shields.io/badge/Java-17-ED8B00)]()
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-00618A)]()
-[![Maven](https://img.shields.io/badge/Maven-4.0.0-C71A36)]()
-[![JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Active-217346)]()
 
 
 

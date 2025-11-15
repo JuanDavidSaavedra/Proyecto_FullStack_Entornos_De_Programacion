@@ -1,5 +1,5 @@
 # 🏟️ Sistema de Reservas Deportivas
-## Plataforma integral para la gestión eficiente de canchas, usuarios y reservas deportivas
+Plataforma integral para la gestión eficiente de canchas, usuarios y reservas deportivas
 
 ## 🛠️ Stack Tecnológico
 

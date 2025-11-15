@@ -4,14 +4,18 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Azure
+## Gestión del Proyecto aplicando la metodología SCRUM en Azure:
+
+- Para ver las historias de usuario que hemos realizado en los diferentes Sprints de este Proyecto ve al siguiente enlace:
 
 https://dev.azure.com/reservadechanchas/
+
+- Menú de la izquierda en la opción "Boards" y luego en "Sprints"
+  
 
 ## 📖 Descripción del Proyecto
 
 **Sistema de Reservas Deportivas** es una plataforma web completa diseñada para optimizar la gestión de instalaciones deportivas. Desarrollado como proyecto académico para la asignatura de Entornos de Programación, ofrece una solución integral que conecta administradores y usuarios en un ecosistema deportivo eficiente.
-
 
 https://github.com/user-attachments/assets/31388d50-1ed3-4819-9732-073b00bfed24
 

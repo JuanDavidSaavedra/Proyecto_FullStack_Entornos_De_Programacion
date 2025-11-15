@@ -1,5 +1,4 @@
-# 🏟️ Sistema de Reservas Deportivas
-Plataforma integral para la gestión eficiente de canchas, usuarios y reservas deportivas
+# 🏟️ Sistema de Reservas Deportivas - Plataforma integral para la gestión eficiente de canchas, usuarios y reservas deportivas
 
 ---
 

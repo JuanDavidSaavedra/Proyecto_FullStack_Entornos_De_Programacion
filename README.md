@@ -16,6 +16,7 @@
 
 ### Para ver las historias de usuario que hemos realizado en los diferentes Sprints de este Proyecto ve al enlace de abajo y sigue esta ruta:
 
+- En Projects seleccionas "Reserva de canchas".
 - Menú de la izquierda en la opción "Boards".
 - Y luego en "Sprints".
 
@@ -26,9 +27,7 @@ https://dev.azure.com/reservadechanchas/
 
 **Sistema de Reservas Deportivas** es una plataforma web completa diseñada para optimizar la gestión de instalaciones deportivas. Desarrollado como proyecto académico para la asignatura de Entornos de Programación, ofrece una solución integral que conecta administradores y usuarios en un ecosistema deportivo eficiente.
 
-
 https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
-
 
 
 ### 🎯 Objetivos Principales

@@ -47,7 +47,7 @@
 
 ---
 
-## Gestión del Proyecto (Azure):
+## Gestión del Proyecto (Azure)
 
 ### Para ver las historias de usuario que hemos realizado en los diferentes Sprints de este Proyecto usando la metodología de desarrollo de proyectos SCRUM ve al enlace de abajo y sigue esta ruta:
 
@@ -154,16 +154,73 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
    cd ProyectoinicialEntornosDeProgramacion
    ```
 
-2. **Configurar Base de Datos**
+2.  **🗄️ Configuración de la Base de Datos en MySQL Workbench**
+
+Para ejecutar el backend correctamente, es necesario configurar la base de datos **MySQL** y crear todas las tablas y datos iniciales. A continuación se describen los pasos para realizar el setup desde **MySQL Workbench**.
+
+- ⚙️ 2.1. Crear la conexión en MySQL Workbench
+
+   1. Abrir **MySQL Workbench**.
+   2. Hacer clic en **MySQL Connections > + (New Connection)**.
+   3. Configurar los valores de la conexión como se muestra:
+
+   | Campo               | Valor                    |
+   | ------------------- | ------------------------ |
+   | **Connection Name** | ProyectoInicial          |
+   | **Hostname**        | 127.0.0.1                |
+   | **Port**            | 3306                     |
+   | **Username**        | root                     |
+   | **Password**        | (tu contraseña de MySQL) |
+
+   4. Probar la conexión con **Test Connection**.
+   5. Guardar y abrir la conexión.
+
+---
+
+- 📄 2.2. Ejecutar el script SQL completo
+
+   Una vez dentro de la conexión:
+
+   1. Ir a **File > New Query Tab**.
+   2. Copiar **todo el script SQL completo** mostrado abajo.
+   3. Ejecutarlo con el botón **Run (⚡)** o presionando **Ctrl + Enter**.
+
+**IMPORTANTE:**
+Este script **elimina la base de datos ProyectoInicial si existe** y la crea nuevamente desde cero, junto con todas las tablas, usuarios, canchas, reservas y datos iniciales.
+
+- 📌 Script SQL (header)
 
    ```sql
-   CREATE DATABASE reservas_deportivas;
-   CREATE USER 'reservas_user'@'localhost' IDENTIFIED BY 'password';
-   GRANT ALL PRIVILEGES ON reservas_deportivas.* TO 'reservas_user'@'localhost';
+   -- Script SQL para ProyectoInicial - Reservas de Canchas Deportivas en Colombia
+   -- Eliminar base de datos si existe y crearla nuevamente
+   DROP DATABASE IF EXISTS ProyectoInicial;
+   CREATE DATABASE ProyectoInicial;
+   USE ProyectoInicial;
+
+   -- Crear tabla usuarios
+   CREATE TABLE usuarios (
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   cedula VARCHAR(20) UNIQUE NOT NULL,
+   nombre VARCHAR(100) NOT NULL,
+   email VARCHAR(100) UNIQUE NOT NULL,
+   usuario VARCHAR(50) UNIQUE NOT NULL,
+   contraseña VARCHAR(255) NOT NULL COMMENT 'Contraseña encriptada con BCrypt',
+   rol VARCHAR(20) NOT NULL COMMENT 'ADMIN, OPERATOR, USER',
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+
+   -- Crear tabla canchas (actualizada con capacidad y horarios)
+   CREATE TABLE canchas (
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   nombre VARCHAR(100) NOT NULL,
+
+   
    ... Resto del Script SQL contenido en este Repositorio llamado "ProyectoInicial.sql"
+
+   
    ```
 
-3. **Configurar Application Properties**
+4. **Configurar Application Properties**
 
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/reservas_deportivas
@@ -196,7 +253,7 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
    server.port=8095
    ```
 
-4. **Ejecutar la Aplicación**
+5. **Ejecutar la Aplicación**
 
    **BackEnd: Ejecuta directamente desde tu IDE o con:**
 
@@ -223,13 +280,17 @@ https://github.com/user-attachments/assets/9b6cc939-887c-49b8-ad15-beffec6dc7ff
    npm start
    ```
    
-5. **Acceder al Sistema**
+6. **Acceder al Sistema**
 
-   # Para revisar el BackEnd (Endpoints):
-   * http://localhost:8095/api/usuarios # o .../api/canchas o /api/reservas
+   - Para revisar el BackEnd (Endpoints):
+   ```
+   http://localhost:8095/api/usuarios # o .../api/canchas o /api/reservas
+   ```
    
-   # Para el FrontEnd:
-   * http://localhost:3000
+   - Para el FrontEnd:
+   ```
+   http://localhost:3000
+   ```
 
    
 ---

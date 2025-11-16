@@ -163,6 +163,7 @@ Para ejecutar el backend correctamente, es necesario configurar la base de datos
    1. Abrir **MySQL Workbench**.
    2. Hacer clic en **MySQL Connections > + (New Connection)**.
    3. Configurar los valores de la conexión como se muestra:
+  
 
    | Campo               | Valor                    |
    | ------------------- | ------------------------ |
@@ -171,6 +172,7 @@ Para ejecutar el backend correctamente, es necesario configurar la base de datos
    | **Port**            | 3306                     |
    | **Username**        | root                     |
    | **Password**        | (tu contraseña de MySQL) |
+
 
    4. Probar la conexión con **Test Connection**.
    5. Guardar y abrir la conexión.

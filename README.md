@@ -454,17 +454,16 @@ C:.
 
 ### 🎯 Enfoque SCRUM
 
-* **Sprints** quincenales
-* **Daily Stand-ups** virtuales
-* **Review y Retrospectiva** al final de cada sprint
-* **Azure Boards** para seguimiento de tareas
+* **Sprints** quincenales.
+* **Daily Stand-ups** virtuales.
+* **Review y Retrospectiva** al final de cada sprint.
+* **Azure Boards** para seguimiento de tareas.
 
 ### ✅ Criterios de Aceptación
 
-* Código limpio y documentado
-* Pruebas unitarias implementadas
-* Interfaz responsive y accesible
-* Seguridad aplicada en todos los niveles
+* Código limpio y documentado.
+* Pruebas unitarias implementadas.
+* Interfaz responsive y accesible.
 
 ---
 

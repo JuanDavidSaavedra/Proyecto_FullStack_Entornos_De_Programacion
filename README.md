@@ -1,4 +1,4 @@
-# 🏟️ SISTEMA DE RESERVAS DEPORTIVAS
+# 🏟️ SISTEMA DE RESERVAS DE CANCHAS DEPORTIVAS
 **PLATAFORMA INTEGRAL PARA LA GESTIÓN EFICIENTE DE CANCHAS, USUARIOS Y RESERVAS DEPORTIVAS**
 
 
@@ -70,7 +70,7 @@ https://github.com/user-attachments/assets/3cc7cfa8-dd05-4cec-a2ac-6aae4b265be3
 ---
 
 ### 🎯 Objetivos Principales
-- Digitalizar y automatizar el proceso de reservas deportivas
+- Digitalizar y automatizar el proceso de reservas de canchas deportivas
 - Mejorar la experiencia del usuario final
 - Optimizar la utilización de instalaciones deportivas
 - Proporcionar herramientas avanzadas de gestión para administradores
